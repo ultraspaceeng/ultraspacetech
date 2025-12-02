@@ -293,9 +293,18 @@
 
 /* Team */
 .teamGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    overflow-x: auto;
     gap: 2rem;
+    padding: 1rem 0 2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.teamGrid::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 .teamCard {
@@ -303,6 +312,8 @@
     border-radius: 20px;
     overflow: hidden;
     aspect-ratio: 3/4;
+    flex: 0 0 320px;
+    min-width: 320px;
 }
 
 .teamImage {
@@ -347,7 +358,7 @@
     gap: 1rem;
 }
 
-.socialLinks *{
+.socialLinks * {
     color: white !important;
 }
 
@@ -509,11 +520,13 @@
     gap: 2rem;
     padding: 1rem 0 2rem;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .productsScrollContainer::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 .productCard {
