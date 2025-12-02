@@ -13,7 +13,8 @@ import {
     FaGithub,
     FaEnvelope,
     FaMapMarkerAlt,
-    FaPhone
+    FaPhone,
+    FaArrowRight
 } from 'react-icons/fa';
 
 // --- CONTENT VARIABLES ---
@@ -33,7 +34,7 @@ const HEADER_CONTENT = {
 
 const HERO_CONTENT = {
     title: 'Innovating the Future of',
-    titleHighlight: 'Digital Solutions',
+    titleHighlight: 'Innovative Solutions',
     subtitle: 'We craft cutting-edge software, robust engineering systems, and transformative technologies to propel your business into the next era.',
     cta: 'Get Started'
 };
@@ -67,7 +68,16 @@ const SERVICES_CONTENT = {
 const PRODUCTS_CONTENT = {
     title: 'Our Products',
     description: 'We are building something amazing. Stay tuned for our upcoming suite of enterprise-grade software products designed to revolutionize your workflow.',
-    status: 'Coming Soon'
+    status: 'Coming Soon',
+    items: [
+        {
+            title: 'FlashMailPro',
+            description: 'helping businesses grow through the power of email. Our mission is to make professional email marketing accessible to everyone.',
+            image: "https://flashmailpro.vercel.app/imgs/about.jpg",
+            link: 'https://flashmailpro.vercel.app/'
+        },
+       
+    ]
 };
 
 const TEAM_CONTENT = {
@@ -103,17 +113,18 @@ const FOOTER_CONTENT = {
                 // { label: 'Blog', href: '#' },
             ]
         },
-        {
-            title: 'Legal',
-            links: [
-                // { label: 'Privacy Policy', href: '#' },
-                // { label: 'Terms of Service', href: '#' },
-            ]
-        },
+        // {
+        //     title: 'Legal',
+        //     links: [
+        //         // { label: 'Privacy Policy', href: '#' },
+        //         // { label: 'Terms of Service', href: '#' },
+        //     ]
+        // },
         {
             title: 'Social',
             links: [
                 { label: 'Twitter', href: 'https://x.com/UltraSpaceTech' },
+                { label: 'Facebook', href: 'https://web.facebook.com/61584268426595/' },
                 // { label: 'LinkedIn', href: '#' },
                 // { label: 'Instagram', href: '#' },
             ]
@@ -207,10 +218,27 @@ export default function LandingPage() {
             <section id="products" className={styles.section}>
                 <div className={styles.container}>
                     <h2 className={styles.sectionTitle}>{PRODUCTS_CONTENT.title}</h2>
-                    <div className={styles.productPlaceholder}>
-                        <p className={styles.productDesc}>{PRODUCTS_CONTENT.description}</p>
-                        <span className={styles.productStatus}>{PRODUCTS_CONTENT.status}</span>
-                    </div>
+                    {PRODUCTS_CONTENT.items && PRODUCTS_CONTENT.items.length > 0 ? (
+                        <div className={styles.productsScrollContainer}>
+                            {PRODUCTS_CONTENT.items.map((product, index) => (
+                                <div key={index} className={styles.productCard}>
+                                    <img src={product.image} alt={product.title} className={styles.productImage} />
+                                    <div className={styles.productContent}>
+                                        <h3 className={styles.productTitle}>{product.title}</h3>
+                                        <p className={styles.productDescription}>{product.description}</p>
+                                        <a target='_blank' href={product.link} className={styles.productLink}>
+                                            Learn More <FaArrowRight />
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className={styles.productPlaceholder}>
+                            <p className={styles.productDesc}>{PRODUCTS_CONTENT.description}</p>
+                            <span className={styles.productStatus}>{PRODUCTS_CONTENT.status}</span>
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -226,9 +254,9 @@ export default function LandingPage() {
                                     <h3 className={styles.teamName}>{member.name}</h3>
                                     <p className={styles.teamRole}>{member.role}</p>
                                     <div className={styles.socialLinks}>
-                                        <a target='_blank' href={member.socials.twitter} className={styles.socialIcon}><FaTwitter /></a>
-                                        <a target='_blank' href={member.socials.linkedin} className={styles.socialIcon}><FaLinkedin /></a>
-                                        <a target='_blank' href={member.socials.github} className={styles.socialIcon}><FaGithub /></a>
+                                        <a target='_blank' href={member.socials.twitter} className={styles.socialIcon} rel="noopener noreferrer"><FaTwitter /></a>
+                                        <a target='_blank' href={member.socials.linkedin} className={styles.socialIcon} rel="noopener noreferrer"><FaLinkedin /></a>
+                                        <a target='_blank' href={member.socials.github} className={styles.socialIcon} rel="noopener noreferrer"><FaGithub /></a>
                                     </div>
                                 </div>
                             </div>
@@ -247,14 +275,14 @@ export default function LandingPage() {
                                 <FaMapMarkerAlt className={styles.contactIcon} />
                                 <span>{CONTACT_CONTENT.info.address}</span>
                             </div>
-                            <div className={styles.contactItem}>
+                            <a href={`mailto:${CONTACT_CONTENT.info.email}`} className={styles.contactItem}>
                                 <FaEnvelope className={styles.contactIcon} />
                                 <span>{CONTACT_CONTENT.info.email}</span>
-                            </div>
-                            <div className={styles.contactItem}>
+                            </a>
+                            <a href={`tel:${CONTACT_CONTENT.info.phone.replace(/\s/g, '')}`} className={styles.contactItem}>
                                 <FaPhone className={styles.contactIcon} />
                                 <span>{CONTACT_CONTENT.info.phone}</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -275,7 +303,7 @@ export default function LandingPage() {
                                 <h4>{col.title}</h4>
                                 <div className={styles.footerLinks}>
                                     {col.links.map((link, idx) => (
-                                        <a key={idx} href={link.href} className={styles.footerLink}>{link.label}</a>
+                                        <a key={idx} href={link.href} className={styles.footerLink} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}>{link.label}</a>
                                     ))}
                                 </div>
                             </div>

@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ultra Space Technologies",
+  title: "Ultra Space Innovation",
   description: "The NEXT GEN Software, Technology, Engineering Innovative Creations ",
 };
 
