@@ -33,7 +33,7 @@ const HEADER_CONTENT = {
 
 const HERO_CONTENT = {
     title: 'Innovating the Future of',
-    titleHighlight: 'Digital Solutions',
+    titleHighlight: 'Innovative Solutions',
     subtitle: 'We craft cutting-edge software, robust engineering systems, and transformative technologies to propel your business into the next era.',
     cta: 'Get Started'
 };
