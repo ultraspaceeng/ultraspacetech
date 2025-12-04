@@ -6,7 +6,6 @@ import {
     FaBars,
     FaTimes,
     FaCode,
-    FaLaptopCode,
     FaCogs,
     FaTwitter,
     FaLinkedin,
@@ -14,7 +13,8 @@ import {
     FaEnvelope,
     FaMapMarkerAlt,
     FaPhone,
-    FaArrowRight
+    FaArrowRight,
+    FaMicrochip
 } from 'react-icons/fa';
 
 // --- CONTENT VARIABLES ---
@@ -53,7 +53,7 @@ const SERVICES_CONTENT = {
             description: 'Custom web and mobile applications built with the latest frameworks to ensure speed, scalability, and security.'
         },
         {
-            icon: <FaLaptopCode />,
+            icon: <FaMicrochip />,
             title: 'Technology Consulting',
             description: 'Strategic guidance to help you navigate the digital landscape and optimize your IT infrastructure.'
         },
