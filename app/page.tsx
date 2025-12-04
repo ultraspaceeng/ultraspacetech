@@ -67,7 +67,7 @@ const SERVICES_CONTENT = {
 
 const PRODUCTS_CONTENT = {
     title: 'Our Products',
-    description: 'We are building something amazing. Stay tuned for our upcoming suite of enterprise-grade software products designed to revolutionize your workflow.',
+    description: 'We are building something amazing. Stay tuned for our upcoming suite of enterprise-grade software/technology/engineering products designed to revolutionize your workflow.',
     status: 'Coming Soon',
     items: [
         {
@@ -220,6 +220,8 @@ export default function LandingPage() {
                 <div className={styles.container}>
                     <h2 className={styles.sectionTitle}>{PRODUCTS_CONTENT.title}</h2>
                     <small className={styles.sectionDesc}>{PRODUCTS_CONTENT.description}</small>
+                    <br />
+                    <br />
                     <br />
                     <br />
                     
