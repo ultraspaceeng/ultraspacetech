@@ -2,7 +2,7 @@
 :root {
   /* Light Theme Colors */
   --background: rgba(0, 0, 0, 0.8);
-  --foreground: #0a0a0b;
+  --foreground: white;
   --primary: royalblue;
   --primary-foreground: #ffffff;
 }
@@ -49,7 +49,7 @@ body {
   font-style: normal;
   font-variation-settings: "wdth" 100;
   scroll-behavior: smooth;
-  color: rgba(0, 0, 0, 0.692) !important;
+  /* color: rgba(0, 0, 0, 0.692) !important; */
   -webkit-tap-highlight-color: transparent;
   /* font-size: 14px !important; */
   font-family: var(--font-geist-sans);
