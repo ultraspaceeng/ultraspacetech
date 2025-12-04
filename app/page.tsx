@@ -72,6 +72,7 @@ const PRODUCTS_CONTENT = {
     items: [
         {
             title: 'FlashMailPro',
+            category: "SaaS",
             description: 'helping businesses grow through the power of email. Our mission is to make professional email marketing accessible to everyone.',
             image: "https://flashmailpro.vercel.app/imgs/about.jpg",
             link: 'https://flashmailpro.vercel.app/'
@@ -226,6 +227,7 @@ export default function LandingPage() {
                                     <img src={product.image} alt={product.title} className={styles.productImage} />
                                     <div className={styles.productContent}>
                                         <h3 className={styles.productTitle}>{product.title}</h3>
+                                        <p className={styles.productCategory}>{product.category}</p>
                                         <p className={styles.productDescription}>{product.description}</p>
                                         <a target='_blank' href={product.link} className={styles.productLink}>
                                             Learn More <FaArrowRight />
