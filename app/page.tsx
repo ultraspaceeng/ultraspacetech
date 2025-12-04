@@ -219,7 +219,7 @@ export default function LandingPage() {
             <section id="products" className={styles.section}>
                 <div className={styles.container}>
                     <h2 className={styles.sectionTitle}>{PRODUCTS_CONTENT.title}</h2>
-                    <p className={styles.sectionDesc}>{PRODUCTS_CONTENT.description}</p>
+                    <small className={styles.sectionDesc}>{PRODUCTS_CONTENT.description}</small>
                     {PRODUCTS_CONTENT.items && PRODUCTS_CONTENT.items.length > 0 ? (
                         <div className={styles.productsScrollContainer}>
                             {PRODUCTS_CONTENT.items.map((product, index) => (
