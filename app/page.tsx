@@ -29,6 +29,7 @@ const HEADER_CONTENT = {
         { label: 'Products', href: '#products' },
         { label: 'Team', href: '#team' },
         { label: 'Contact', href: '#contact' },
+        { label: 'Store', href: '#' },
     ]
 };
 
@@ -126,6 +127,7 @@ const FOOTER_CONTENT = {
             links: [
                 { label: 'Twitter', href: 'https://x.com/UltraSpaceTech' },
                 { label: 'Facebook', href: 'https://web.facebook.com/61584268426595/' },
+                { label: 'Telegram', href: 'https://t.me/UltraSpaceTech' },
                 // { label: 'LinkedIn', href: '#' },
                 // { label: 'Instagram', href: '#' },
             ]
