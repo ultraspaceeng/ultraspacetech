@@ -29,7 +29,7 @@ const HEADER_CONTENT = {
         { label: 'Products', href: '#products' },
         { label: 'Team', href: '#team' },
         { label: 'Contact', href: '#contact' },
-        { label: 'Store', href: '#' },
+        { label: 'Store', href: 'https://ultrasstore.vercel.app/' },
     ]
 };
 
