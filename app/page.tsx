@@ -69,14 +69,21 @@ const SERVICES_CONTENT = {
 const PRODUCTS_CONTENT = {
     title: 'Our Products',
     description: 'We are building something amazing. Stay tuned for our upcoming suite of enterprise-grade software/technology/engineering products designed to revolutionize your workflow.',
-    status: 'Coming Soon',
+    status: 'Launched',
     items: [
         {
             title: 'FlashMailPro',
             category: "SaaS",
-            description: 'helping businesses grow through the power of email. Our mission is to make professional email marketing accessible to everyone.',
+            description: 'Helping businesses grow through the power of email. Our mission is to make professional email marketing accessible to everyone.',
             image: "https://flashmailpro.vercel.app/imgs/about.jpg",
             link: 'https://flashmailpro.vercel.app/'
+        },
+         {
+            title: 'DropifyPro',
+            category: "B2B (Ecommerce)",
+            description: 'A powerful B2B e-commerce solution designed to streamline wholesale operations and simplify supply chain management for growing enterprises.',
+            image: "https://dropifypro.vercel.app/imgs/logo.png",
+            link: 'https://dropifypro.vercel.app/'
         },
        
     ]
