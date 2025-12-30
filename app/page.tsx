@@ -135,11 +135,27 @@ const TEAM_CONTENT = {
 
 const CONTACT_CONTENT = {
     title: 'Get In Touch',
-    info: {
-        address: 'Lagos State, Nigeria',
-        email: 'ultraspaceeng@gmail.com',
-        phone: '+234 08131519518'
-    }
+    subtitle: "Have a project in mind or want to discuss a new idea? We'd love to hear from you.",
+    items: [
+        {
+            icon: <FaMapMarkerAlt />,
+            title: 'Visit Us',
+            value: 'International! & Nigeria',
+            link: null
+        },
+        {
+            icon: <FaEnvelope />,
+            title: 'Email Us',
+            value: 'ultraspaceeng@gmail.com',
+            link: 'mailto:ultraspaceeng@gmail.com'
+        },
+        {
+            icon: <FaPhone />,
+            title: 'Call Us',
+            value: '+234 08131519518',
+            link: 'tel:+23408131519518'
+        }
+    ]
 };
 
 const FOOTER_CONTENT = {
@@ -328,19 +344,24 @@ export default function LandingPage() {
                 <div className={styles.container}>
                     <div className={styles.contactWrapper}>
                         <h2 className={styles.sectionTitle}>{CONTACT_CONTENT.title}</h2>
-                        <div className={styles.contactDetailsCentered}>
-                            <div className={styles.contactItem}>
-                                <FaMapMarkerAlt className={styles.contactIcon} />
-                                <span>{CONTACT_CONTENT.info.address}</span>
-                            </div>
-                            <a href={`mailto:${CONTACT_CONTENT.info.email}`} className={styles.contactItem}>
-                                <FaEnvelope className={styles.contactIcon} />
-                                <span>{CONTACT_CONTENT.info.email}</span>
-                            </a>
-                            <a href={`tel:${CONTACT_CONTENT.info.phone.replace(/\s/g, '')}`} className={styles.contactItem}>
-                                <FaPhone className={styles.contactIcon} />
-                                <span>{CONTACT_CONTENT.info.phone}</span>
-                            </a>
+                        <p className={styles.sectionDesc}>{CONTACT_CONTENT.subtitle}</p>
+                        <br />
+                        <div className={styles.contactGrid}>
+                            {CONTACT_CONTENT.items.map((item, index) => (
+                                item.link ? (
+                                    <a key={index} href={item.link} className={styles.contactCard}>
+                                        <div className={styles.contactCardIcon}>{item.icon}</div>
+                                        <h3 className={styles.contactCardTitle}>{item.title}</h3>
+                                        <p className={styles.contactCardValue}>{item.value}</p>
+                                    </a>
+                                ) : (
+                                    <div key={index} className={styles.contactCard}>
+                                        <div className={styles.contactCardIcon}>{item.icon}</div>
+                                        <h3 className={styles.contactCardTitle}>{item.title}</h3>
+                                        <p className={styles.contactCardValue}>{item.value}</p>
+                                    </div>
+                                )
+                            ))}
                         </div>
                     </div>
                 </div>
