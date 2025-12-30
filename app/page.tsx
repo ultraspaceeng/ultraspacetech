@@ -15,14 +15,18 @@ import {
     FaMapMarkerAlt,
     FaPhone,
     FaArrowRight,
-    FaMicrochip
+    FaMicrochip,
+    FaFlask,
+    FaShieldAlt,
+    FaAtom,
+    FaLightbulb
 } from 'react-icons/fa';
 
 // --- CONTENT VARIABLES ---
 
 const HEADER_CONTENT = {
     logo: 'UltraSpace',
-    logoHighlight: 'Tech',
+    logoHighlight: 'Innov',
     navLinks: [
         { label: 'Home', href: '#hero' },
         { label: 'About', href: '#about' },
@@ -63,6 +67,26 @@ const SERVICES_CONTENT = {
             icon: <FaCogs />,
             title: 'Engineering Solutions',
             description: 'End-to-end engineering services, from system architecture to deployment and maintenance.'
+        },
+        {
+            icon: <FaFlask />,
+            title: 'Medicine Research',
+            description: 'Pioneering medical breakthroughs and healthcare solutions.'
+        },
+        {
+            icon: <FaShieldAlt />,
+            title: 'Military Research',
+            description: 'Advanced defense technologies and strategic innovations.'
+        },
+        {
+            icon: <FaAtom />,
+            title: 'Spiritual (Quantum Research)',
+            description: 'Exploring the intersection of consciousness and quantum mechanics.'
+        },
+        {
+            icon: <FaLightbulb />,
+            title: 'All Innovations',
+            description: 'A hub for all forward-thinking ideas and technological advancements.'
         }
     ]
 };
@@ -120,7 +144,7 @@ const CONTACT_CONTENT = {
 
 const FOOTER_CONTENT = {
     brand: 'UltraSpace Tech',
-    description: 'Empowering businesses with next-gen technology solutions.',
+    description: 'Empowering businesses with next-gen technology & Innovative solutions.',
     columns: [
         {
             title: 'Company',
@@ -143,8 +167,8 @@ const FOOTER_CONTENT = {
                 { label: 'Twitter', href: 'https://x.com/UltraSpaceTech' },
                 { label: 'Facebook', href: 'https://web.facebook.com/61584268426595/' },
                 { label: 'Telegram', href: 'https://t.me/UltraSpaceTech' },
-                // { label: 'LinkedIn', href: '#' },
-                // { label: 'Instagram', href: '#' },
+                { label: 'TickTock', href: 'https://www.tiktok.com/@ultra_space_innov' },
+                { label: 'Instagram', href: 'https://www.instagram.com/ultraspace.inno/' },
             ]
         }
     ],
