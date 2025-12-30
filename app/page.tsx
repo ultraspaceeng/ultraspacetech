@@ -10,6 +10,7 @@ import {
     FaTwitter,
     FaLinkedin,
     FaGithub,
+    FaGlobe,
     FaEnvelope,
     FaMapMarkerAlt,
     FaPhone,
@@ -78,7 +79,7 @@ const PRODUCTS_CONTENT = {
             image: "https://flashmailpro.vercel.app/imgs/about.jpg",
             link: 'https://flashmailpro.vercel.app/'
         },
-         {
+        {
             title: 'DropifyPro',
             category: "B2B (Ecommerce)",
             description: 'A powerful B2B e-commerce solution designed to streamline wholesale operations and simplify supply chain management for growing enterprises.',
@@ -92,7 +93,7 @@ const PRODUCTS_CONTENT = {
             image: "https://x-searchpro.vercel.app/logo.png",
             link: 'https://x-searchpro.vercel.app/'
         }
-       
+
     ]
 };
 
@@ -240,7 +241,7 @@ export default function LandingPage() {
                     <br />
                     <br />
                     <br />
-                    
+
                     {PRODUCTS_CONTENT.items && PRODUCTS_CONTENT.items.length > 0 ? (
                         <div className={styles.productsScrollContainer}>
                             {PRODUCTS_CONTENT.items.map((product, index) => (
@@ -278,9 +279,18 @@ export default function LandingPage() {
                                     <h3 className={styles.teamName}>{member.name}</h3>
                                     <p className={styles.teamRole}>{member.role}</p>
                                     <div className={styles.socialLinks}>
-                                        <a target='_blank' href={member.socials.twitter} className={styles.socialIcon} rel="noopener noreferrer"><FaTwitter /></a>
-                                        <a target='_blank' href={member.socials.linkedin} className={styles.socialIcon} rel="noopener noreferrer"><FaLinkedin /></a>
-                                        <a target='_blank' href={member.socials.github} className={styles.socialIcon} rel="noopener noreferrer"><FaGithub /></a>
+                                        {member.socials.website && (
+                                            <a target='_blank' href={member.socials.website} className={styles.socialIcon} rel="noopener noreferrer" title="Personal Website"><FaGlobe /></a>
+                                        )}
+                                        {member.socials.twitter && (
+                                            <a target='_blank' href={member.socials.twitter} className={styles.socialIcon} rel="noopener noreferrer"><FaTwitter /></a>
+                                        )}
+                                        {member.socials.linkedin && (
+                                            <a target='_blank' href={member.socials.linkedin} className={styles.socialIcon} rel="noopener noreferrer"><FaLinkedin /></a>
+                                        )}
+                                        {member.socials.github && (
+                                            <a target='_blank' href={member.socials.github} className={styles.socialIcon} rel="noopener noreferrer"><FaGithub /></a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
