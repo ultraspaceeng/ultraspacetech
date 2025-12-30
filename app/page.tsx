@@ -85,6 +85,13 @@ const PRODUCTS_CONTENT = {
             image: "https://dropifypro.vercel.app/imgs/logo.png",
             link: 'https://dropifypro.vercel.app/'
         },
+        {
+            title: "xSearchPro",
+            category: "B2C",
+            description: 'An AI Powered search engine designed to provide users with a fast and efficient way to search for contents from the internet',
+            image: "https://x-searchpro.vercel.app/logo.png",
+            link: 'https://x-searchpro.vercel.app/'
+        }
        
     ]
 };
@@ -96,7 +103,7 @@ const TEAM_CONTENT = {
             name: 'Joshua Akinleye',
             role: 'CEO & Founder, Software Developer',
             image: 'https://pbs.twimg.com/profile_images/1921202683211374592/EPtjK_X1_400x400.jpg',
-            socials: { twitter: 'https://x.com/Joshuaakinleye4', linkedin: 'https://www.linkedin.com/in/joshua-a-9895b61ab/', github: 'https://github.com/Akinleyejoshua' }
+            socials: { website: "https://akinleyejoshua.vercel.app/", twitter: 'https://x.com/Joshuaakinleye4', linkedin: 'https://www.linkedin.com/in/joshua-a-9895b61ab/', github: 'https://github.com/Akinleyejoshua' }
         },
     ]
 };
