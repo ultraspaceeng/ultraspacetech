@@ -116,7 +116,14 @@ const PRODUCTS_CONTENT = {
             description: 'An AI Powered search engine designed to provide users with a fast and efficient way to search for contents from the internet',
             image: "https://x-searchpro.vercel.app/logo.png",
             link: 'https://x-searchpro.vercel.app/'
-        }
+        },
+        {
+            title: "xRecPro",
+            category: "B2C",
+            description: 'An AI Powered HR Interviewing Platform ',
+            image: "https://x-recpro.vercel.app/images/logo.png",
+            link: 'https://x-recpro.vercel.app/'
+        },
 
     ]
 };
