@@ -120,7 +120,7 @@ const PRODUCTS_CONTENT = {
         {
             title: "xRecPro",
             category: "B2C",
-            description: 'An AI Powered HR Interviewing Platform ',
+            description: 'An AI Powered HR Interviewing Platform designed to help businesses find the right candidates for their roles.',
             image: "https://x-recpro.vercel.app/images/logo.png",
             link: 'https://x-recpro.vercel.app/'
         },
