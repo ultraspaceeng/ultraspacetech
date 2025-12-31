@@ -117,13 +117,13 @@ const PRODUCTS_CONTENT = {
             image: "https://x-searchpro.vercel.app/logo.png",
             link: 'https://x-searchpro.vercel.app/'
         },
-        {
-            title: "xRecPro",
-            category: "B2C",
-            description: 'An AI Powered HR Interviewing Platform designed to help businesses find the right candidates for their roles.',
-            image: "https://x-recpro.vercel.app/images/logo.png",
-            link: 'https://x-recpro.vercel.app/'
-        },
+        // {
+        //     title: "xRecPro",
+        //     category: "B2C",
+        //     description: 'An AI Powered HR Interviewing Platform designed to help businesses find the right candidates for their roles.',
+        //     image: "https://x-recpro.vercel.app/images/logo.png",
+        //     link: 'https://x-recpro.vercel.app/'
+        // },
 
     ]
 };
