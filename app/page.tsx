@@ -135,7 +135,7 @@ const TEAM_CONTENT = {
             name: 'Joshua Akinleye',
             role: 'CEO & Founder, Software Developer',
             image: 'https://ultraspacetech.vercel.app/team-ceo.jpg',
-            socials: { website: "https://joshuapro.netlify.app/", twitter: 'https://x.com/Joshuaakinleye4', linkedin: '', github: 'https://github.com/Akinleyejoshua' }
+            socials: { website: "https://joshuapro.netlify.app/", twitter: 'https://x.com/Joshuaakinleye4', linkedin: 'https://www.linkedin.com/in/joshua-akinleye-061a013a6/', github: 'https://github.com/Akinleyejoshua' }
         },
     ]
 };
